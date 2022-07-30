@@ -1,0 +1,257 @@
+/*
+    Name: Woody
+    Description: Responsive Coming Soon 
+    Version: 1.5
+    Author: MountainTheme
+
+    TABLE OF CONTENTS
+    ---------------------------
+     1. General
+     2. Header
+     3. Countdown
+     4. About
+     5. Twitter
+     6. Services
+     7. Subscribe
+     8. Team
+     9. Google map
+     10. Contact
+     11. Footer
+     12. Responsive CSS
+*/
+
+/* ================================= */
+
+/* :::::::::: 1. General ::::::::::: */
+
+/* ================================= */
+
+html,
+body {
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-font-smoothing: antialiased;
+}
+
+#page-loader {
+    background: #242830;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 99999;
+}
+
+.loader-icon {
+    background: none repeat scroll 0 0 #242830;
+    border-bottom: 4px solid rgba(19, 19, 19, 0.1) !important;
+    border-left: 4px solid rgba(19, 19, 19, 0.1) !important;
+    border-radius: 100px;
+    -moz-border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -o-border-radius: 100px;
+    -ms-border-radius: 100px;
+    border-right: 4px solid rgba(19, 19, 19, 0.1) !important;
+    border-top: 4px solid;
+    height: 60px;
+    left: 50%;
+    margin: -20px 0 0 -20px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    width: 60px;
+}
+
+.colored-border {
+    border-color: #2CC9B4;
+}
+
+.fa-spin {
+    -webkit-animation: fa-spin 1.2s infinite linear;
+    animation: fa-spin 1.2s infinite linear
+}
+
+@-webkit-keyframes fa-spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg)
+    }
+}
+
+@keyframes fa-spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg)
+    }
+}
+
+::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: #8c9398;
+}
+
+:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #8c9398;
+    opacity: 1;
+}
+
+::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #8c9398;
+    opacity: 1;
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: #8c9398;
+}
+
+/* ================================= */
+
+/* :::::::::: 2. Header :::::::::::: */
+
+/* ================================= */
+
+header {
+    text-align: left;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+header .typed {
+    font-size: 1.9em;
+    color: #FFFFFF;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: "Aldrich", sans-serif;
+    letter-spacing: 1px;
+}
+
+header canvas {
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+}
+
+header .logo {
+    margin-top: 130px;
+    margin-bottom: 30px;
+}
+
+header .line {
+    display: inline-block;
+    width: 40px;
+    height: 30px;
+    margin: 0 auto;
+}
+
+.welcome {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+	margin-top: -30px;
+}
+
+header p {
+    font-size: 13px;
+    color: rgba(236, 240, 241, 0.9);
+    word-spacing: 1px;
+    line-height: 25px;
+    font-weight: 400;
+}
+
+header .fa-clock-o {
+    font-size: 31px;
+    color: #FFFFFF;
+    margin-right: 5px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+header h3 {
+    color: #FFFFFF;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    font-family: 'Aldrich', sans-serif;
+}
+
+header h1 span {
+    font-weight: 500;
+}
+
+header .mouse-wrapper {
+    display: block;
+    z-index: 10;
+    position: absolute;
+    margin-left: 18px;
+    bottom: -110px;
+}
+
+header .mouse {
+    margin-left: -20px;
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    left: 50%;
+    animation: wobbleArrow 1s ease-in-out 0s infinite alternate;
+    -webkit-animation: wobbleArrow 1s ease-in-out 0s infinite alternate;
+    -moz-animation: wobbleArrow 1s ease-in-out 0s infinite alternate;
+    -o-animation: wobbleArrow 1s ease-in-out 0s infinite alternate;
+}
+
+header .mouse span {
+    position: absolute;
+    left: -19px;
+    bottom: 40px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-size: 1.3em;
+    display: block;
+    color: #fff;
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+
+header .mouse a {
+    color: #FFFFFF;
+    position: relative;
+    top: 110px;
+    line-height: 36px;
+    text-align: center;
+    outline: none;
+}
+
+header .mouse a i {
+    font-size: 1.3em;
+}
+
+   
+@-webkit-keyframes wobbleArrow {
+    from {
+        bottom: 40px;
+    }
+    to {
+        bottom: 50px;
+    }
+}
+
